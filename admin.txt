@@ -1,0 +1,8 @@
+SUPERUSER
+username: super
+password: super123
+
+USER
+username: sdsd
+password: sdsd1234
+	
