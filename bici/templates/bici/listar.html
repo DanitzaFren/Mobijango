@@ -1,37 +1,41 @@
 {% extends 'base/base.html' %}
 
 {% block content %}
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">Codigo</th>
-      <th scope="col">Estacionamiento</th>
-      <th scope="col">Direccion</th>
-      <th scope="col">Disponible</th>
-    </tr>
-  </thead>
-	<tbody>
-		{% if object_list %}
-		{% for bici in object_list %}
-		<tr>
-			<td>{{ bici.codigo }}</td>
-			<td>{{ bici.estacionamiento }}</td>
-			<td>{{ bici.direccion }}</td>
-			<td>{{ bici.disponible }}</td>
+<div class="jumbotron" style="position: absolute;">
+	<table class="table table-hover" >
+	  <thead>
+
+	    <tr>
+	      <th scope="col">Codigo</th>
+	      <th scope="col">Estacionamiento</th>
+	      <th scope="col">Direccion</th>
+	      <th scope="col">Disponible</th>
+	    </tr>
+	  </thead>
+
+		<tbody>
+			{% if object_list %}
+			{% for bici in object_list %}
+			<tr>
+				<td>{{ bici.codigo }}</td>
+				<td>{{ bici.estacionamiento }}</td>
+				<td>{{ bici.direccion }}</td>
+				<td>{{ bici.disponible }}</td>
+				
+				<td>
+				<td>
+				 	<a class= "btn btn-primary" href="{% url 'mapa' %}">Ver mapa</a>﻿
+				 	<a class="btn btn-danger" href="{% url 'sca' %}">Scanear QR</a>
+				</td>
+				</td>
+			</tr>
+			{% endfor %}
 			
-			<td>
-			<td>
-			 	<a class= "btn btn-primary" href="{% url 'mapa' %}">Ver mapa</a>﻿
-			 	<a class="btn btn-danger" href="{#}">Solicitar</a>
-			</td>
-			</td>
-		</tr>
-		{% endfor %}
-		
-		{% else %}
-		<h1>No hay registros de bicicletas</h1>
-		{% endif %}
-	</tbody>
-</table> 
+			{% else %}
+			<h1>No hay registros de bicicletas</h1>
+			{% endif %}
+		</tbody>
+	</table> 
+</div>
 
 {% endblock%}

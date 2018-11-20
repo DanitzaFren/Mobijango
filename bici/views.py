@@ -12,3 +12,7 @@ class ListaBici(ListView):
 
 def VerMapa(request):
     return render(request, 'bici/mapa.html', {})
+
+
+def Scaner(request):
+    return render(request, 'bici/qr.html', {})

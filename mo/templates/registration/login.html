@@ -6,12 +6,12 @@ Mobike | iniciar sesión
 {% block navbar%}
 {% endblock %}
 {% block content %}
-<div class="jumbotron">
+<div class="jumbotron" style="position: absolute; width: 600px">
 <form method="post">
     {% csrf_token %}
 
      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-7 col-md-offset-3">
             <div class="form-group">
                 <label for="username">Nombre de usuario:</label>
                 <input class="form-control" type="text" name="username" required>
@@ -19,7 +19,7 @@ Mobike | iniciar sesión
         </div>
     </div>    
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-7 col-md-offset-3">
             <div class="form-group">
                 <label for="username">Contraseña:</label>
                 <input class="form-control" type="password" name="password" required>
@@ -27,7 +27,7 @@ Mobike | iniciar sesión
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-7 col-md-offset-3">
             <div class="form-group">
                 <input class="btn btn-primary" type="submit" value="Ingresar">
                 
