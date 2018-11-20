@@ -5,7 +5,5 @@ from . import views
 urlpatterns = [
      path('registrar', views.RegistroUsuario.as_view(), name='usuario'),
      path('', views.menu, name='menu'),
-    
 
-  
 	]
